@@ -11,6 +11,5 @@ end
 -- end
 
 function love.draw()
-    love.graphics.setColor(252, 247, 255)
     draw.squares()
 end
