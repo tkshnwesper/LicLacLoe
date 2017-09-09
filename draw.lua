@@ -6,7 +6,7 @@ local constant = 100
 local constant2 = 0.05
 
 -- responsible for every single square
-local function square(dims, i, j)
+local function square(dims, i, j, chr)
     love.graphics.setColor(252, 247, 255)
     love.graphics.rectangle(
         'fill', (j - 1) * dims.w3rd,
@@ -16,7 +16,7 @@ local function square(dims, i, j)
     )
     love.graphics.setColor(0, 0, 0)
     love.graphics.print(
-        'X',
+        chr,
         (j - 1) * dims.w3rd + dims.w3rd / 2 - dims.width * constant2,
         (i - 1) * dims.h3rd + dims.h3rd / 2 - dims.height * constant2,
         0,
@@ -26,11 +26,11 @@ local function square(dims, i, j)
 end
 
 -- function to draw all the squares on the tic tac toe board
-function draw.squares()
+function draw.squares(board)
     local dims = dimensions.get()
     for i = 1, 3 do
         for j = 1, 3 do
-            square(dims, i, j)
+            square(dims, i, j, board[(i - 1) * 3 + j])
         end
     end
 end
