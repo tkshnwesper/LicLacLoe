@@ -12,4 +12,5 @@ end
 
 function love.draw()
     draw.squares()
+    draw.lines()
 end
