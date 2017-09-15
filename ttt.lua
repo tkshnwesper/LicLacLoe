@@ -20,8 +20,11 @@ function ttt:at(x, y)
     else
         chr = 'X'
     end
-    self.board[x + (y - 1) * 3] = chr
-    self.turn = self.turn + 1
+    local eqn = x + (y - 1) * 3
+    if self.board[eqn] == '' then
+        self.board[eqn] = chr
+        self.turn = self.turn + 1
+    end
 end
 
 return ttt

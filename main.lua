@@ -17,10 +17,6 @@ end
 function love.draw()
     draw.squares(ttt.board)
     draw.lines()
-    -- if xsq and ysq then
-    --     love.graphics.setColor(0, 0, 0)
-    --     love.graphics.print(xsq .. ' ' .. ysq, 0, 0)
-    -- end
     local winner = calculate.winCondition(ttt.board)
     if winner then
         love.graphics.print(winner .. ' wins!', 0, 0)
