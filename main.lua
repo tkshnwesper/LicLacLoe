@@ -14,11 +14,19 @@ function love.mousepressed(x, y, button, isTouch)
     ttt:at(xsq, ysq)
 end
 
+local won = false
+
 function love.draw()
     draw.squares(ttt.board)
     draw.lines()
+    if won then
+        won = false
+        love.timer.sleep(3)
+        ttt = ttt_import:new()
+    end
     local winner = calculate.winCondition(ttt.board)
     if winner then
         love.graphics.print(winner .. ' wins!', 0, 0)
+        won = true
     end
 end
