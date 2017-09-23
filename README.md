@@ -1,4 +1,4 @@
-<center>![logo](https://droppy.cryf.in/$/avrzg)</center>
+![logo](https://droppy.cryf.in/$/avrzg)
 
 ## How to run
 
