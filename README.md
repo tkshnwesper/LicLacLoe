@@ -1,3 +1,5 @@
+<center>![logo](https://droppy.cryf.in/$/avrzg)</center>
+
 ## How to run
 
 You need to have [LÖVE](https://love2d.org/) installed, folks!
